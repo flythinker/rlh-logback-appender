@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>flythinker.rlh</groupId>
+    <groupId>com.github.flythinker.rlh</groupId>
     <artifactId>logback-appender</artifactId>
-    <version>0.2.1-SNAPSHOT</version>
-	
+    <version>0.2.4</version>
+    <!--<version>0.2.2-SNAPSHOT</version>-->
 	<inceptionYear>2018</inceptionYear>
 
   <licenses>
@@ -19,15 +19,20 @@
   </licenses>
 
   <scm>
-    <url>https://github.com/flythinker/rlh-logback-appender</url>
-    <connection>git@github.com:flythinker/rlh-logback-appender.git</connection>
-	</scm>  
-
+    <connection>
+        scm:git:https://github.com/flythinker/rlh-logback-appender.git
+    </connection>
+    <developerConnection>
+      scm:git:https://github.com/flythinker/rlh-logback-appender.git
+    </developerConnection>
+    <url>
+        https://github.com/flythinker/rlh-logback-appender
+    </url>
+  </scm>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-
         <junit.version>4.12</junit.version>
     </properties>
 
@@ -68,6 +73,24 @@
                         <goals>
                             <goal>jar</goal>
                         </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                        <configuration>
+                            <keyname>${gpg.keyname}</keyname>
+                            <passphraseServerId>gpg_passphrase</passphraseServerId>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
