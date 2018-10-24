@@ -18,4 +18,5 @@ public class LogbackRedisAppenderTest {
     public void testBasicFunc(){
         logger.info("testBasicFunc");
     }
+
 }

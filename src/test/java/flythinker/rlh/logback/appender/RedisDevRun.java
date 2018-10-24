@@ -6,7 +6,7 @@ package flythinker.rlh.logback.appender;
 public class RedisDevRun {
     static void test1() throws Exception
     {
-
+        LogbackRedisAppender appender = new LogbackRedisAppender();
     }
     public static void main(String[] args)
     {

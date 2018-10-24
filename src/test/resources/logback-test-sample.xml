@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <configuration scan="true">
-    <appender name="RedisFile" class="iloghub.logback.core.LogbackRedisAppender">
+    <appender name="RLH_Appender" class="flythinker.rlh.logback.appender.LogbackRedisAppender">
         <redisConfig>redis://pass@127.0.0.1:6379</redisConfig>
-        <logName>RLH_Appender</logName>
+        <logName>RLH_test</logName>
         <encoder>
             <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36}[:%L] - %msg%n</pattern>
         </encoder>

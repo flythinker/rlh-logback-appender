@@ -12,9 +12,6 @@ public class LogbackDevRun {
 
     public static void test1() throws Exception{
         logger.info("test1 start.");
-        LogbackRedisAppender appender = new LogbackRedisAppender();
-
-
     }
 
     public static void main(String[] args)
