@@ -36,7 +36,7 @@ public class LogbackRedisAppender<E> extends OutputStreamAppender<E> {
     }
 
     /**
-     *
+     * 发送日志到Redis
      * @param log
      * @param startPos
      * @param size
